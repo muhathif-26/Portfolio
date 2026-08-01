@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jabeer Mohammed Muhaththeef — Software Developer</title>
+  <meta name="description"
+    content="Portfolio of Jabeer Mohammed Muhaththeef — HNDIT undergraduate, software developer and frontend designer specializing in responsive web applications, PHP/MySQL systems, and UI/UX design.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Futuristic Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader-glow-bg"></div>
+    <div class="loader-content">
+      <div class="loader-rings">
+        <div class="ring outer-ring"></div>
+        <div class="ring middle-ring"></div>
+        <div class="ring inner-ring"></div>
+        <div class="loader-logo">M U <span>H A</span></div>
+      </div>
+      <div class="loader-text-wrapper">
+        <span class="loader-status" id="loader-status">INITIALIZING SYSTEM</span>
+        <div class="loader-progress-bar">
+          <div class="loader-progress-fill" id="loader-fill"></div>
+        </div>
+        <div class="loader-percentage"><span id="loader-percent">0</span>%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll progress -->
+  <div id="scroll-progress"></div>
+  <!-- Cursor glow -->
+  <div id="cursor-glow"></div>
+  <!-- Particle background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navbar -->
+  <header id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="logo">M U <span> H A</span></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <span class="live-clock" id="live-clock"><span class="dot-live"></span><span
+            id="clock-text">--:--:--</span></span>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle light and dark theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-controls="nav-links"
+          aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Open to internships</span>
+        <h1 class="hero-name">Jabeer Mohammed<br><span class="gradient-text">Muhaththeef</span></h1>
+        <div class="hero-role"><span id="typed-text"></span><span class="cursor-blink">|</span></div>
+        <p class="hero-desc">HNDIT undergraduate building responsive web applications with HTML5, CSS3, JavaScript, PHP
+          and MySQL — with a growing focus on clean UI/UX and database-driven systems. Based in Nintavur, Sri Lanka.</p>
+        <div class="hero-ctas">
+          <a href="assets/resume/Jabeer_Mohammed_Muhaththeef_Resume.pdf" class="btn btn-primary" data-ripple>
+            <i class="fa-solid fa-eye"></i> View Resume
+          </a>
+          <a href="#contact" class="btn btn-outline" data-ripple>
+            <i class="fa-regular fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a class="social-icon" href="https://github.com/muhathif-26" target="_blank" rel="noopener"
+            aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a class="social-icon" href="https://linkedin.com/in/muhammad-muhathif" target="_blank" rel="noopener"
+            aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a class="social-icon" href="mailto:muhathifmuhathif26@gmail.com" aria-label="Email"><i
+              class="fa-regular fa-envelope"></i></a>
+          <a class="social-icon" href="https://wa.me/94769788951" target="_blank" rel="noopener"
+            aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-reveal="fade">
+        <div class="hologram-chamber">
+          <!-- Ambient Aura Glow -->
+          <div class="hologram-glow"></div>
+
+          <!-- Rotating Sci-Fi Ring Overlays -->
+          <div class="hologram-ring hologram-ring-outer"></div>
+          <div class="hologram-ring hologram-ring-inner"></div>
+          <div class="hologram-ring hologram-ring-dots"></div>
+
+          <!-- Interactive Photo Container -->
+          <div class="hologram-core" data-tilt>
+            <div class="scanner-line"></div>
+            <img src="assets/images/Profile.svg" alt="Jabeer Mohammed Muhaththeef" id="profile-photo">
+
+            <!-- Matrix data details in corners of hologram -->
+            <div class="hologram-stat-overlay top-left">SYS_LOAD: 98%</div>
+            <div class="hologram-stat-overlay top-right">LOC: LKA_24</div>
+            <div class="hologram-stat-overlay bottom-left">HNDIT_NODE</div>
+            <div class="hologram-stat-overlay bottom-right">CORE: ONLINE</div>
+          </div>
+
+          <!-- Floating Status Console Badge -->
+          <div class="cyber-floating-badge glass">
+            <span class="cyber-pulse"></span>
+            <span class="badge-tag">// SYSTEM_STATUS:</span>
+            <span class="badge-val">OPEN_TO_INTERNSHIPS</span>
+          </div>
+
+          <!-- Cyber Floating Mini Console -->
+          <div class="cyber-floating-terminal glass" data-tilt>
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span
+                class="terminal-dot green"></span>
+              <span class="terminal-label">muha.sys // dev_specs</span>
+            </div>
+            <div class="terminal-content">
+              <span class="t-kw">const</span> <span class="t-prop">specs</span> = {<br>
+              &nbsp;&nbsp;<span class="t-prop">focus</span>: <span class="t-str">'Fullstack_Dev'</span>,<br>
+              &nbsp;&nbsp;<span class="t-prop">engine</span>: [<span class="t-str">'PHP'</span>, <span
+                class="t-str">'MySQL'</span>, <span class="t-str">'JS'</span>]<br>
+              };
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container about-grid">
+      <div data-reveal>
+        <div class="about-photo glass">
+          <img src="assets/images/Profile.svg" alt="Jabeer Mohammed Muhaththeef portrait">
+
+        </div>
+        <div class="about-stats">
+          <div class="about-stat glass">
+            <div class="num">2</div>
+            <div class="label">Academic Projects</div>
+          </div>
+          <div class="about-stat glass">
+            <div class="num">5+</div>
+            <div class="label">Technologies</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span class="eyebrow" data-reveal>About me</span>
+        <h2 class="section-title" data-reveal>Building software that feels as good as it works</h2>
+        <div class="about-text" data-reveal data-reveal-delay="1">
+          <p>I'm a motivated and detail-oriented Higher National Diploma in Information Technology (HNDIT) student at
+            the Advanced Technological Institute, Sammanthurai, with a strong foundation in software engineering, web
+            application development, database management, and UI/UX design.</p>
+          <p>I build responsive, user-focused web applications with HTML5, CSS3, JavaScript, PHP and MySQL, learned
+            through academic coursework and hands-on personal projects. I'm passionate about building innovative
+            software solutions, continuously sharpening my technical skills, and contributing effectively to a
+            professional development team.</p>
+          <p>My goal is to secure an internship or entry-level role as a Software Developer, Web Developer, or IT
+            Support professional — applying what I know, growing my engineering craft, and contributing to impactful
+            projects at a forward-thinking IT organization.</p>
+        </div>
+
+        <div class="about-langs" data-reveal data-reveal-delay="2">
+          <span class="lang-pill glass"><b>Tamil</b><span>Native</span></span>
+          <span class="lang-pill glass"><b>English</b><span>Professional</span></span>
+          <span class="lang-pill glass"><b>Sinhala</b><span>Intermediate</span></span>
+        </div>
+
+        <span class="eyebrow" data-reveal>Core competencies</span>
+        <div class="competencies" data-reveal>
+          <span class="chip glass">Problem Solving</span>
+          <span class="chip glass">Leadership</span>
+          <span class="chip glass">Communication</span>
+          <span class="chip glass">Teamwork</span>
+          <span class="chip glass">Critical Thinking</span>
+          <span class="chip glass">Time Management</span>
+          <span class="chip glass">Quick Learner</span>
+          <span class="chip glass">Adaptability</span>
+          <span class="chip glass">Database Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Skills</span>
+      <h2 class="section-title" data-reveal>Technical toolkit</h2>
+      <p class="section-sub" data-reveal>The languages, tools, and disciplines I use to design and ship web
+        applications.</p>
+
+      <div class="skills-grid">
+        <div class="skill-row glass" data-reveal>
+          <div class="skill-top"><span class="skill-name"><i class="fa-brands fa-html5"></i>HTML5</span><span
+              class="skill-pct">95%</span></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="95"></div>
+          </div>
+        </div>
+        <div class="skill-row glass" data-reveal>
+          <div class="skill-top"><span class="skill-name"><i class="fa-brands fa-css3-alt"></i>CSS3</span><span
+              class="skill-pct">90%</span></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="90"></div>
+          </div>
+        </div>
+        <div class="skill-row glass" data-reveal>
+          <div class="skill-top"><span class="skill-name"><i class="fa-brands fa-js"></i>JavaScript</span><span
+              class="skill-pct">85%</span></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-row glass" data-reveal>
+          <div class="skill-top"><span class="skill-name"><i class="fa-brands fa-php"></i>PHP</span><span
+              class="skill-pct">85%</span></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-row glass" data-reveal>
+          <div class="skill-top"><span class="skill-name"><i class="fa-solid fa-database"></i>MySQL</span><span
+              class="skill-pct">85%</span></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-row glass" data-reveal>
+          <div class="skill-top"><span class="skill-name"><i class="fa-solid fa-pen-ruler"></i>UI/UX Design</span><span
+              class="skill-pct">80%</span></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="80"></div>
+          </div>
+        </div>
+        <div class="skill-row glass" data-reveal>
+          <div class="skill-top"><span class="skill-name"><i class="fa-solid fa-mobile-screen"></i>Responsive Web
+              Design</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-row glass" data-reveal>
+          <div class="skill-top"><span class="skill-name"><i class="fa-solid fa-palette"></i>Graphic Design</span><span
+              class="skill-pct">80%</span></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="80"></div>
+          </div>
+        </div>
+        <div class="skill-row glass" data-reveal>
+          <div class="skill-top"><span class="skill-name"><i class="fa-brands fa-git-alt"></i>Git</span><span
+              class="skill-pct">70%</span></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="70"></div>
+          </div>
+        </div>
+        <div class="skill-row glass" data-reveal>
+          <div class="skill-top"><span class="skill-name"><i class="fa-solid fa-file-word"></i>Microsoft
+              Office</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="90"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Projects</span>
+      <h2 class="section-title" data-reveal>Selected academic projects</h2>
+      <p class="section-sub" data-reveal>Full-stack applications built end-to-end — from database schema to responsive
+        UI. <em>Add your own project screenshots and links any time — see the guide at the end of this chat.</em></p>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card glass" data-reveal data-tilt>
+          <div class="project-thumb">
+            <img src="assets/images/project-car-rental.png" alt="Car Rental Booking System" class="project-img">
+            <div class="">
+              <div class="project-thumb-dots"><span></span><span></span><span></span></div>
+              <div class="project-thumb-window-bar"></div>
+              <div class="project-thumb-sidebar"></div>
+              <div class="project-thumb-grid">
+                <div class="project-thumb-box">
+                  <div class="project-thumb-line" style="width: 80%;"></div>
+                  <div class="project-thumb-line" style="width: 50%;"></div>
+                </div>
+                <div class="project-thumb-box">
+                  <div class="project-thumb-line" style="width: 70%;"></div>
+                  <div class="project-thumb-line" style="width: 40%;"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="project-body">
+            <h3>Car Rental Booking System</h3>
+            <p>A responsive web-based car rental platform with user authentication, vehicle management, and booking
+              management backed by a MySQL database.</p>
+            <ul class="project-features">
+              <li>User authentication &amp; access management</li>
+              <li>Vehicle &amp; booking management</li>
+              <li>Responsive, enhanced UX interface</li>
+            </ul>
+            <div class="tech-badges">
+              <span class="tech-badge">HTML5</span><span class="tech-badge">CSS3</span><span
+                class="tech-badge">JavaScript</span><span class="tech-badge">PHP</span><span
+                class="tech-badge">MySQL</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/muhathif-26/Car-Rental-Booking-System" target="_blank" rel="noopener"><i
+                  class="fa-brands fa-github"></i> Code</a>
+              <a href="https://muhathif-26.github.io/Car-Rental-Booking-System/" target="_blank" rel="noopener"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card glass" data-reveal data-reveal-delay="1" data-tilt>
+          <div class="project-thumb">
+            <img src="assets/images/project-prescription.png" alt="Prescription Management System" class="project-img">
+            <div class="">
+              <div class="project-thumb-dots"><span></span><span></span><span></span></div>
+              <div class="project-thumb-window-bar"></div>
+              <div class="project-thumb-sidebar"></div>
+              <div class="project-thumb-grid">
+                <div class="project-thumb-box">
+                  <div class="project-thumb-line" style="width: 60%;"></div>
+                  <div class="project-thumb-line" style="width: 45%;"></div>
+                </div>
+                <div class="project-thumb-box">
+                  <div class="project-thumb-line" style="width: 80%;"></div>
+                  <div class="project-thumb-line" style="width: 35%;"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="project-body">
+            <h3>Prescription Management System</h3>
+            <p>A role-based healthcare management application with separate doctor and patient portals, appointment
+              scheduling, and secure record management.</p>
+            <ul class="project-features">
+              <li>Doctor &amp; patient portals with secure login</li>
+              <li>Appointment management &amp; PDF prescriptions</li>
+              <li>Secure MySQL database implementation</li>
+            </ul>
+            <div class="tech-badges">
+              <span class="tech-badge">PHP</span><span class="tech-badge">JavaScript</span><span
+                class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">MySQL</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/muhathif-26/Prescription-Management-System" target="_blank" rel="noopener"><i
+                  class="fa-brands fa-github"></i> Code</a>
+              <a href="https://muhathif-26.github.io/Prescription-Management-System/" target="_blank" rel="noopener"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE + EDUCATION -->
+  <section id="experience">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Journey</span>
+      <h2 class="section-title" data-reveal>Experience &amp; education</h2>
+      <p class="section-sub" data-reveal>Freelance work and academic milestones so far.</p>
+
+      <div class="timeline">
+        <div class="timeline-item glass" data-reveal>
+          <span class="timeline-date">ONGOING · SELF-EMPLOYED</span>
+          <h3>Freelance Web Designer &amp; Frontend Developer</h3>
+          <div class="org">Independent</div>
+          <ul>
+            <li>Designed and developed responsive websites and modern user interfaces for academic and personal projects
+            </li>
+            <li>Created professional digital assets including logos, posters, banners, and social media graphics</li>
+            <li>Enhanced website functionality and frontend performance using HTML, CSS, JavaScript, PHP, and MySQL</li>
+          </ul>
+        </div>
+        <div class="timeline-item glass" data-reveal data-reveal-delay="1">
+          <span class="timeline-date">PRESENT</span>
+          <h3>Higher National Diploma in Information Technology (HNDIT)</h3>
+          <div class="org">Advanced Technological Institute (ATI), Sammanthurai</div>
+        </div>
+        <div class="timeline-item glass" data-reveal data-reveal-delay="2">
+          <span class="timeline-date">2024</span>
+          <h3>G.C.E Advanced Level</h3>
+          <div class="org">KM/KM Al-Ashraq National School</div>
+        </div>
+        <div class="timeline-item glass" data-reveal data-reveal-delay="3">
+          <span class="timeline-date">2021</span>
+          <h3>G.C.E Ordinary Level</h3>
+          <div class="org">KM/KM Addapallam Sahitha Vidyalaya</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Services</span>
+      <h2 class="section-title" data-reveal>What I can help with</h2>
+      <p class="section-sub" data-reveal>End-to-end web development, from database schema to polished interface.</p>
+
+      <div class="services-grid">
+        <div class="service-card glass" data-reveal>
+          <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Full-stack websites built with HTML, CSS, JavaScript, PHP and MySQL.</p>
+        </div>
+        <div class="service-card glass" data-reveal data-reveal-delay="1">
+          <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Clean, user-focused interfaces designed for clarity and ease of use.</p>
+        </div>
+        <div class="service-card glass" data-reveal data-reveal-delay="2">
+          <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>Frontend Development</h3>
+          <p>Responsive, accessible layouts that work across mobile, tablet and desktop.</p>
+        </div>
+        <div class="service-card glass" data-reveal>
+          <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+          <h3>Backend Development</h3>
+          <p>Server-side logic and authentication systems built with PHP.</p>
+        </div>
+        <div class="service-card glass" data-reveal data-reveal-delay="1">
+          <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+          <h3>Database Design</h3>
+          <p>Structured, reliable MySQL schemas for real-world applications.</p>
+        </div>
+        <div class="service-card glass" data-reveal data-reveal-delay="2">
+          <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h3>Responsive Website Design</h3>
+          <p>Websites that look and perform great on any screen size.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="container">
+      <div class="counters-grid">
+        <div class="counter-card glass" data-reveal>
+          <div class="counter-num" data-count="2">0</div>
+          <div class="counter-label">Projects Completed</div>
+        </div>
+        <div class="counter-card glass" data-reveal data-reveal-delay="1">
+          <div class="counter-num" data-count="10">0</div>
+          <div class="counter-label">Technologies Learned</div>
+        </div>
+        <div class="counter-card glass" data-reveal data-reveal-delay="2">
+          <div class="counter-num" data-count="5">0</div>
+          <div class="counter-label">Happy Clients</div>
+        </div>
+        <div class="counter-card glass" data-reveal data-reveal-delay="3">
+          <div class="counter-num" data-count="3">0</div>
+          <div class="counter-label">Years Learning</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS / GITHUB / TESTIMONIALS placeholders -->
+  <section id="more">
+    <div class="container">
+      <span class="eyebrow" data-reveal>More</span>
+      <h2 class="section-title" data-reveal>Certifications &amp; activity</h2>
+      <p class="section-sub" data-reveal>Sections ready for you to fill in as you grow your credentials.</p>
+
+      <div class="mini-grid">
+        <div class="mini-card glass" data-reveal>
+          <i class="fa-solid fa-certificate"></i>
+          <h4>Certifications</h4>
+          <p>No certifications added yet — list course or training certificates here as you earn them.</p>
+        </div>
+        <div id="github-activity-card" class="mini-card glass" data-reveal data-reveal-delay="1">
+          <i class="fa-brands fa-github"></i>
+          <h4>GitHub Activity</h4>
+          <p>Connect your GitHub username in <code>script.js</code> to show your contribution activity here.</p>
+        </div>
+        <div class="mini-card glass" data-reveal data-reveal-delay="2">
+          <i class="fa-solid fa-quote-left"></i>
+          <h4>Testimonials</h4>
+          <p>No testimonials yet — ask a client, lecturer, or teammate for a short quote to feature here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container contact-grid">
+      <div>
+        <span class="eyebrow" data-reveal>Contact</span>
+        <h2 class="section-title" data-reveal>Let's work together</h2>
+        <p class="section-sub" data-reveal>Open to internships and entry-level software development roles. Reach out any
+          time.</p>
+
+        <div data-reveal>
+          <div class="contact-info-item">
+            <div class="icon-box"><i class="fa-regular fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4><a href="mailto:muhathifmuhathif26@gmail.com">muhathifmuhathif26@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <p>+94769788951</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h4>Location</h4>
+              <p><a href="https://www.google.com/maps?q=7.326596,81.850236" target="_blank" rel="noopener">Open in
+                  Google Maps</a></p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon-box"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div>
+              <h4>LinkedIn</h4><a href="https://linkedin.com/in/muhammad-muhathif" target="_blank"
+                rel="noopener">https://linkedin.com/in/muhammad-muhathif</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon-box"><i class="fa-brands fa-github"></i></div>
+            <div>
+              <h4>GitHub</h4><a href="https://github.com/muhathif-26" target="_blank"
+                rel="noopener">https://github.com/muhathif-26</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-embed glass" data-reveal>
+          <iframe src="https://www.google.com/maps?q=7.326596,81.850236&z=15&output=embed" loading="lazy"
+            title="Home location map"></iframe>
+        </div>
+      </div>
+
+      <form class="contact-form glass" data-reveal id="contact-form">
+        <div class="form-row">
+          <div class="form-group"><label for="contact-name">Name</label><input id="contact-name" type="text" name="name"
+              required placeholder="Your name">
+          </div>
+          <div class="form-group"><label for="contact-email">Email</label><input id="contact-email" type="email"
+              name="email" required placeholder="you@example.com"></div>
+        </div>
+        <div class="form-group"><label for="contact-subject">Subject</label><input id="contact-subject" type="text"
+            name="subject" placeholder="What's this about?"></div>
+        <div class="form-group"><label for="contact-message">Message</label><textarea id="contact-message"
+            name="message" rows="5" required placeholder="Tell me about the opportunity or project..."></textarea></div>
+        <button type="submit" class="btn btn-primary btn-full" data-ripple>
+          <i class="fa-regular fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <a href="#hero" class="logo">MU<span>HA</span></a>
+
+        <div class="hero-socials">
+          <a class="social-icon" href="https://github.com/muhathif-26" target="_blank" rel="noopener"><i
+              class="fa-brands fa-github"></i></a>
+          <a class="social-icon" href="https://linkedin.com/in/muhammad-muhathif" target="_blank" rel="noopener"><i
+              class="fa-brands fa-linkedin-in"></i></a>
+          <a class="social-icon" href="mailto:muhathifmuhathif26@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Jabeer Mohammed Muhaththeef. All rights reserved.</span>
+        <span>Made with <span class="heart">&#10084;</span> by Jabeer Mohammed Muhaththeef</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>
